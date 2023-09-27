@@ -5,11 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [
         laravel({
-            input: [
-                // 'resources/scss/style.scss', // need to add sass support
-                'resources/css/app.css',
-                'resources/js/app.tsx',
-            ],
+            input: 'resources/js/app.tsx',
+            ssr: 'resources/js/ssr.tsx',
             refresh: true,
         }),
         react(),
