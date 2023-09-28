@@ -1,3 +1,5 @@
+import { Page, PageProps, Errors, ErrorBag } from "@inertiajs/core";
+
 type DateTime = string;
 
 export type Nullable<T> = T | null;
@@ -32,7 +34,7 @@ export interface Auth {
   >;
 }
 
-export type InertiaSharedProps<T = {}> = T & {
+export type InertiaSharedProps<T> = T & {
   jetstream: {
     canCreateTeams: boolean;
     canManageTwoFactorAuthentication: boolean;
@@ -93,4 +95,19 @@ export interface TeamInvitation {
   role: Nullable<string>;
   created_at: DateTime;
   updated_at: DateTime;
+}
+
+declare global {
+    export interface InertiaPageProps extends Page<PageProps> {
+        props: {
+            errors: Errors & ErrorBag;
+            auth: {
+                status?: number | null;
+                user?: User;
+            }
+            route?: {
+                name: string;
+            }
+        }
+    }
 }

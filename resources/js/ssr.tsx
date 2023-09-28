@@ -27,7 +27,7 @@ createServer(page =>
         });
       };
       return (
-        <RouteContext.Provider value={ssrRoute as any}>
+        <RouteContext.Provider value={ssrRoute as never}>
           <App {...props} />
         </RouteContext.Provider>
       );
