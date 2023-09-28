@@ -4,9 +4,9 @@ import useTypedPage from '@/Hooks/useTypedPage';
 
 export default function Banner() {
   const [show, setShow] = useState(true);
-  const { props } = useTypedPage();
-  const style = props.jetstream.flash?.bannerStyle || 'success';
-  const message = props.jetstream.flash?.banner || '';
+  const page = useTypedPage();
+  const style = page.props.jetstream.flash?.bannerStyle || 'success';
+  const message = page.props.jetstream.flash?.banner || '';
 
   return (
     <div>

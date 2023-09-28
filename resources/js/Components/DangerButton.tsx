@@ -1,15 +1,11 @@
 import classNames from 'classnames';
 import React, { PropsWithChildren } from 'react';
-
-type Props = React.DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+import {ButtonProps} from "@/Components/ComponentTypes";
 
 export default function DangerButton({
   children,
   ...props
-}: PropsWithChildren<Props>) {
+}: PropsWithChildren<ButtonProps>) {
   return (
     <button
       {...props}
