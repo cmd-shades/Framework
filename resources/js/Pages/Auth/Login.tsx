@@ -47,7 +47,7 @@ export default function Login({ canResetPassword, status }: Props) {
             type="email"
             className="mt-1 block w-full"
             value={form.data.email}
-            onChange={e => form.setData('email', e.currentTarget.value)}
+            onChange={(e) => form.setData('email', e.currentTarget.value)}
             required
             autoFocus
           />
@@ -61,7 +61,7 @@ export default function Login({ canResetPassword, status }: Props) {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password}
-            onChange={e => form.setData('password', e.currentTarget.value)}
+            onChange={(e) => form.setData('password', e.currentTarget.value)}
             required
             autoComplete="current-password"
           />
@@ -73,7 +73,7 @@ export default function Login({ canResetPassword, status }: Props) {
             <Checkbox
               name="remember"
               checked={form.data.remember === 'on'}
-              onChange={e =>
+              onChange={(e) =>
                 form.setData('remember', e.currentTarget.checked ? 'on' : '')
               }
             />

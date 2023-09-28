@@ -1,4 +1,4 @@
-import { Page, PageProps, Errors, ErrorBag } from "@inertiajs/core";
+import { Page, PageProps, Errors, ErrorBag } from '@inertiajs/core';
 
 type DateTime = string;
 
@@ -98,16 +98,16 @@ export interface TeamInvitation {
 }
 
 declare global {
-    export interface InertiaPageProps extends Page<PageProps> {
-        props: {
-            errors: Errors & ErrorBag;
-            auth: {
-                status?: number | null;
-                user?: User;
-            }
-            route?: {
-                name: string;
-            }
-        }
-    }
+  export interface InertiaPageProps extends Page<PageProps> {
+    props: {
+      errors: Errors & ErrorBag;
+      auth: {
+        status?: number | null;
+        user?: User;
+      };
+      route?: {
+        name: string;
+      };
+    };
+  }
 }

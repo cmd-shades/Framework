@@ -72,7 +72,7 @@ export default function CreateTeamForm() {
           type="text"
           className="mt-1 block w-full"
           value={form.data.name}
-          onChange={e => form.setData('name', e.currentTarget.value)}
+          onChange={(e) => form.setData('name', e.currentTarget.value)}
           autoFocus
         />
         <InputError message={form.errors.name} className="mt-2" />

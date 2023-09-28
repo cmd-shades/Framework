@@ -98,7 +98,7 @@ export default function TeamMemberManager({
 
   function leaveTeam() {
     leaveTeamForm.delete(
-      route('team-members.destroy', [team, page.props.auth.user!]),
+      route('team-members.destroy', [team, page.props.auth.user!])
     );
   }
 
@@ -117,12 +117,12 @@ export default function TeamMemberManager({
         preserveScroll: true,
         preserveState: true,
         onSuccess: () => setTeamMemberBeingRemoved(null),
-      },
+      }
     );
   }
 
   function displayableRole(role: string) {
-    return availableRoles.find(r => r.key === role)?.name;
+    return availableRoles.find((r) => r.key === role)?.name;
   }
 
   return (
@@ -173,7 +173,7 @@ export default function TeamMemberManager({
                 type="email"
                 className="mt-1 block w-full"
                 value={addTeamMemberForm.data.email}
-                onChange={e =>
+                onChange={(e) =>
                   addTeamMemberForm.setData('email', e.currentTarget.value)
                 }
               />
@@ -203,7 +203,7 @@ export default function TeamMemberManager({
                             i > 0,
                           'rounded-b-none':
                             i != Object.keys(availableRoles).length - 1,
-                        },
+                        }
                       )}
                       onClick={() =>
                         addTeamMemberForm.setData('role', role.key)
@@ -225,7 +225,7 @@ export default function TeamMemberManager({
                               {
                                 'font-semibold':
                                   addTeamMemberForm.data.role == role.key,
-                              },
+                              }
                             )}
                           >
                             {role.name}
@@ -275,7 +275,7 @@ export default function TeamMemberManager({
           >
             {/* <!-- Pending Team Member Invitation List --> */}
             <div className="space-y-6">
-              {team.team_invitations.map(invitation => (
+              {team.team_invitations.map((invitation) => (
                 <div
                   className="flex items-center justify-between"
                   key={invitation.id}
@@ -315,7 +315,7 @@ export default function TeamMemberManager({
           >
             {/* <!-- Team Member List --> */}
             <div className="space-y-6">
-              {team.users.map(user => (
+              {team.users.map((user) => (
                 <div
                   className="flex items-center justify-between"
                   key={user.id}
@@ -391,7 +391,7 @@ export default function TeamMemberManager({
                         i > 0,
                       'rounded-b-none':
                         i !== Object.keys(availableRoles).length - 1,
-                    },
+                    }
                   )}
                   onClick={() => updateRoleForm.setData('role', role.key)}
                   key={role.key}
@@ -411,7 +411,7 @@ export default function TeamMemberManager({
                           {
                             'font-semibold':
                               updateRoleForm.data.role === role.key,
-                          },
+                          }
                         )}
                       >
                         {role.name}

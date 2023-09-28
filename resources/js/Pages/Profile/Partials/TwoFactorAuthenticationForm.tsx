@@ -52,12 +52,12 @@ export default function TwoFactorAuthenticationForm({
           setEnabling(false);
           setConfirming(requiresConfirmation);
         },
-      },
+      }
     );
   }
 
   function showSetupKey() {
-    return axios.get('/user/two-factor-secret-key').then(response => {
+    return axios.get('/user/two-factor-secret-key').then((response) => {
       setSetupKey(response.data.secretKey);
     });
   }
@@ -76,13 +76,13 @@ export default function TwoFactorAuthenticationForm({
   }
 
   function showQrCode() {
-    return axios.get('/user/two-factor-qr-code').then(response => {
+    return axios.get('/user/two-factor-qr-code').then((response) => {
       setQrCode(response.data.svg);
     });
   }
 
   function showRecoveryCodes() {
-    return axios.get('/user/two-factor-recovery-codes').then(response => {
+    return axios.get('/user/two-factor-recovery-codes').then((response) => {
       setRecoveryCodes(response.data);
     });
   }
@@ -192,7 +192,7 @@ export default function TwoFactorAuthenticationForm({
                     autoFocus={true}
                     autoComplete="one-time-code"
                     value={confirmationForm.data.code}
-                    onChange={e =>
+                    onChange={(e) =>
                       confirmationForm.setData('code', e.currentTarget.value)
                     }
                   />
@@ -217,7 +217,7 @@ export default function TwoFactorAuthenticationForm({
               </div>
 
               <div className="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-sm bg-gray-100 dark:bg-gray-900 rounded-lg">
-                {recoveryCodes.map(code => (
+                {recoveryCodes.map((code) => (
                   <div key={code}>{code}</div>
                 ))}
               </div>

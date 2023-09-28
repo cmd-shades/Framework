@@ -70,7 +70,7 @@ export default function APITokenManager({
         preserveScroll: true,
         preserveState: true,
         onSuccess: () => setManagingPermissionsFor(null),
-      },
+      }
     );
   }
 
@@ -88,7 +88,7 @@ export default function APITokenManager({
         preserveScroll: true,
         preserveState: true,
         onSuccess: () => setApiTokenBeingDeleted(null),
-      },
+      }
     );
   }
 
@@ -129,7 +129,7 @@ export default function APITokenManager({
             type="text"
             className="mt-1 block w-full"
             value={createApiTokenForm.data.name}
-            onChange={e =>
+            onChange={(e) =>
               createApiTokenForm.setData('name', e.currentTarget.value)
             }
             autoFocus
@@ -146,25 +146,25 @@ export default function APITokenManager({
             <InputLabel htmlFor="permissions">Permissions</InputLabel>
 
             <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-              {availablePermissions.map(permission => (
+              {availablePermissions.map((permission) => (
                 <div key={permission}>
                   <label className="flex items-center">
                     <Checkbox
                       value={permission}
                       checked={createApiTokenForm.data.permissions.includes(
-                        permission,
+                        permission
                       )}
-                      onChange={e => {
+                      onChange={(e) => {
                         if (
                           createApiTokenForm.data.permissions.includes(
-                            e.currentTarget.value,
+                            e.currentTarget.value
                           )
                         ) {
                           createApiTokenForm.setData(
                             'permissions',
                             createApiTokenForm.data.permissions.filter(
-                              p => p !== e.currentTarget.value,
-                            ),
+                              (p) => p !== e.currentTarget.value
+                            )
                           );
                         } else {
                           createApiTokenForm.setData('permissions', [
@@ -199,7 +199,7 @@ export default function APITokenManager({
             >
               {/* <!-- API Token List --> */}
               <div className="space-y-6">
-                {tokens.map(token => (
+                {tokens.map((token) => (
                   <div
                     className="flex items-center justify-between"
                     key={token.id}
@@ -268,25 +268,25 @@ export default function APITokenManager({
       >
         <DialogModal.Content title={'API Token Permissions'}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {availablePermissions.map(permission => (
+            {availablePermissions.map((permission) => (
               <div key={permission}>
                 <label className="flex items-center">
                   <Checkbox
                     value={permission}
                     checked={updateApiTokenForm.data.permissions.includes(
-                      permission,
+                      permission
                     )}
-                    onChange={e => {
+                    onChange={(e) => {
                       if (
                         updateApiTokenForm.data.permissions.includes(
-                          e.currentTarget.value,
+                          e.currentTarget.value
                         )
                       ) {
                         updateApiTokenForm.setData(
                           'permissions',
                           updateApiTokenForm.data.permissions.filter(
-                            p => p !== e.currentTarget.value,
-                          ),
+                            (p) => p !== e.currentTarget.value
+                          )
                         );
                       } else {
                         updateApiTokenForm.setData('permissions', [

@@ -36,7 +36,7 @@ export default function AppLayout({
       },
       {
         preserveState: false,
-      },
+      }
     );
   }
 
@@ -136,9 +136,9 @@ export default function AppLayout({
                               Switch Teams
                             </div>
 
-                            {page.props.auth.user?.all_teams?.map(team => (
+                            {page.props.auth.user?.all_teams?.map((team) => (
                               <form
-                                onSubmit={e => switchToTeam(e, team)}
+                                onSubmit={(e) => switchToTeam(e, team)}
                                 key={team.id}
                               >
                                 <DropdownLink as="button">
@@ -368,8 +368,11 @@ export default function AppLayout({
                     <div className="block px-4 py-2 text-xs text-gray-400">
                       Switch Teams
                     </div>
-                    {page.props.auth.user?.all_teams?.map(team => (
-                      <form onSubmit={e => switchToTeam(e, team)} key={team.id}>
+                    {page.props.auth.user?.all_teams?.map((team) => (
+                      <form
+                        onSubmit={(e) => switchToTeam(e, team)}
+                        key={team.id}
+                      >
                         <ResponsiveNavLink as="button">
                           <div className="flex items-center">
                             {team.id ==

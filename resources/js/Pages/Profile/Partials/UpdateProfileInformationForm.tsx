@@ -53,7 +53,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
 
     const reader = new FileReader();
 
-    reader.onload = e => {
+    reader.onload = (e) => {
       setPhotoPreview(e.target?.result as string);
     };
 
@@ -164,7 +164,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
           type="text"
           className="mt-1 block w-full"
           value={form.data.name}
-          onChange={e => form.setData('name', e.currentTarget.value)}
+          onChange={(e) => form.setData('name', e.currentTarget.value)}
           autoComplete="name"
         />
         <InputError message={form.errors.name} className="mt-2" />
@@ -178,7 +178,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
           type="email"
           className="mt-1 block w-full"
           value={form.data.email}
-          onChange={e => form.setData('email', e.currentTarget.value)}
+          onChange={(e) => form.setData('email', e.currentTarget.value)}
         />
         <InputError message={form.errors.email} className="mt-2" />
 
@@ -192,7 +192,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
                 method="post"
                 as="button"
                 className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   setVerificationLinkSent(true);
                 }}

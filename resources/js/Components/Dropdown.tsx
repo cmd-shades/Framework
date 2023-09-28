@@ -57,14 +57,14 @@ export default function Dropdown({
           className={classNames(
             'absolute mt-2 rounded-md shadow-lg',
             widthClass,
-            alignmentClasses,
+            alignmentClasses
           )}
           onClick={() => setOpen(false)}
         >
           <div
             className={classNames(
               'rounded-md ring-1 ring-black ring-opacity-5',
-              contentClasses,
+              contentClasses
             )}
           >
             {children}

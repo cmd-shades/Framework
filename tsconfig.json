@@ -1,29 +1,26 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "jsx": "react-jsx",
-        "rootDir": "./resources/js",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "forceConsistentCasingInFileNames": true,
-        "paths": {
-            "@/*": ["./resources/js/*"]
-        },
-
-        "types": ["vite/client"]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "rootDir": "./resources/js",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["./resources/js/*"]
     },
-    "include": [
-        "resources/js/**/*.ts",
-        "resources/js/**/*.tsx",
-        "resources/js/**/*.d.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ],
+
+    "types": ["vite/client"]
+  },
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.tsx",
+    "resources/js/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

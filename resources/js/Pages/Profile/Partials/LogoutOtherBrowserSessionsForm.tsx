@@ -139,7 +139,7 @@ export default function LogoutOtherBrowserSessions({ sessions }: Props) {
               placeholder="Password"
               ref={passwordRef}
               value={form.data.password}
-              onChange={e => form.setData('password', e.currentTarget.value)}
+              onChange={(e) => form.setData('password', e.currentTarget.value)}
             />
 
             <InputError message={form.errors.password} className="mt-2" />

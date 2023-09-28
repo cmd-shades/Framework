@@ -38,7 +38,7 @@ export default function ConfirmPassword() {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password}
-            onChange={e => form.setData('password', e.currentTarget.value)}
+            onChange={(e) => form.setData('password', e.currentTarget.value)}
             required
             autoComplete="current-password"
             autoFocus

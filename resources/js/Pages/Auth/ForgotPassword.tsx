@@ -47,7 +47,7 @@ export default function ForgotPassword({ status }: Props) {
             type="email"
             className="mt-1 block w-full"
             value={form.data.email}
-            onChange={e => form.setData('email', e.currentTarget.value)}
+            onChange={(e) => form.setData('email', e.currentTarget.value)}
             required
             autoFocus
           />

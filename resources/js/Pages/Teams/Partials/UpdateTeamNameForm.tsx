@@ -83,7 +83,7 @@ export default function UpdateTeamNameForm({ team, permissions }: Props) {
           type="text"
           className="mt-1 block w-full"
           value={form.data.name}
-          onChange={e => form.setData('name', e.currentTarget.value)}
+          onChange={(e) => form.setData('name', e.currentTarget.value)}
           disabled={!permissions.canUpdateTeam}
         />
 

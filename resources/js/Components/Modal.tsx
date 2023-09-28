@@ -68,7 +68,7 @@ export default function Modal({
             <div
               className={classNames(
                 'inline-block align-bottom bg-white dark:bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full',
-                maxWidthClass,
+                maxWidthClass
               )}
             >
               {children}
@@ -77,6 +77,6 @@ export default function Modal({
         </div>
       </Dialog>
     </Transition.Root>,
-    document.body,
+    document.body
   );
 }

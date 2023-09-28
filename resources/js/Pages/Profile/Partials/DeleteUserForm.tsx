@@ -67,7 +67,7 @@ export default function DeleteUserForm() {
               className="mt-1 block w-3/4"
               placeholder="Password"
               value={form.data.password}
-              onChange={e => form.setData('password', e.currentTarget.value)}
+              onChange={(e) => form.setData('password', e.currentTarget.value)}
             />
 
             <InputError message={form.errors.password} className="mt-2" />

@@ -41,7 +41,7 @@ export default function ResetPassword({ token, email }: Props) {
             type="email"
             className="mt-1 block w-full"
             value={form.data.email}
-            onChange={e => form.setData('email', e.currentTarget.value)}
+            onChange={(e) => form.setData('email', e.currentTarget.value)}
             required
             autoFocus
           />
@@ -55,7 +55,7 @@ export default function ResetPassword({ token, email }: Props) {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password}
-            onChange={e => form.setData('password', e.currentTarget.value)}
+            onChange={(e) => form.setData('password', e.currentTarget.value)}
             required
             autoComplete="new-password"
           />
@@ -71,7 +71,7 @@ export default function ResetPassword({ token, email }: Props) {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password_confirmation}
-            onChange={e =>
+            onChange={(e) =>
               form.setData('password_confirmation', e.currentTarget.value)
             }
             required

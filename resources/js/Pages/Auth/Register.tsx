@@ -40,7 +40,7 @@ export default function Register() {
             type="text"
             className="mt-1 block w-full"
             value={form.data.name}
-            onChange={e => form.setData('name', e.currentTarget.value)}
+            onChange={(e) => form.setData('name', e.currentTarget.value)}
             required
             autoFocus
             autoComplete="name"
@@ -55,7 +55,7 @@ export default function Register() {
             type="email"
             className="mt-1 block w-full"
             value={form.data.email}
-            onChange={e => form.setData('email', e.currentTarget.value)}
+            onChange={(e) => form.setData('email', e.currentTarget.value)}
             required
           />
           <InputError className="mt-2" message={form.errors.email} />
@@ -68,7 +68,7 @@ export default function Register() {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password}
-            onChange={e => form.setData('password', e.currentTarget.value)}
+            onChange={(e) => form.setData('password', e.currentTarget.value)}
             required
             autoComplete="new-password"
           />
@@ -84,7 +84,7 @@ export default function Register() {
             type="password"
             className="mt-1 block w-full"
             value={form.data.password_confirmation}
-            onChange={e =>
+            onChange={(e) =>
               form.setData('password_confirmation', e.currentTarget.value)
             }
             required
@@ -104,7 +104,9 @@ export default function Register() {
                   name="terms"
                   id="terms"
                   checked={form.data.terms}
-                  onChange={e => form.setData('terms', e.currentTarget.checked)}
+                  onChange={(e) =>
+                    form.setData('terms', e.currentTarget.checked)
+                  }
                   required
                 />
 
